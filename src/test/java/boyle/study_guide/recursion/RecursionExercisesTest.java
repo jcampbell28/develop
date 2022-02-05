@@ -3,6 +3,7 @@ package boyle.study_guide.recursion;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -10,12 +11,18 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = RecursionExercises.class)
 public class RecursionExercisesTest {
 
-    private RecursionExercises recursionExercises = new RecursionExercises();
+    @Autowired
+    RecursionExercises recursionExercises;
 
     @Test
     public void factorialTest(){
-       // RecursionExercises recursionExercises = new RecursionExercises();
         Assert.assertEquals(recursionExercises.factorial(5), 120);
+    }
+
+    @Test
+    public void countNumberOfElementsTest(){
+        int[] elements = {1,2,3};
+        Assert.assertEquals(recursionExercises.countNumberOfElements(elements), 1);
     }
 
     @Test
