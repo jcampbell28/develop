@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 public class FindTheIntersection {
 
-    public static String FindIntersection(String[] strArr) {
+    public static String findIntersection(String[] strArr) {
         String temp = "";
 
         String first = strArr[0];
@@ -38,8 +38,7 @@ public class FindTheIntersection {
     }
 
     public static void main(String[] args) {
-        // keep this function call here
         String[] bothArrays = {"1, 3, 4, 7, 13, 15", "1, 2, 4, 13, 15"};
-        System.out.print(FindIntersection(bothArrays));
+        System.out.print(findIntersection(bothArrays));
     }
 }
