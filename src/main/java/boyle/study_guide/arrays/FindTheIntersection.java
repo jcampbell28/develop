@@ -13,7 +13,7 @@ public class FindTheIntersection {
         String temp = "";
 
         String first = strArr[0];
-        String second = strArr[2];
+        String second = strArr[1];
 
         String[] firstSplitArray = first.split(", ");
         String[] secondSplitArray = second.split(", ");
